@@ -2,6 +2,11 @@
 @import "globalstyle.css";
 @import "main.css";
 
+:root {
+  --button-primary: rgb(254, 111, 15);
+  --button-hover: rgba(254, 111, 15, 0.8);
+}
+
 body {
   margin: 0;
   padding: 0;

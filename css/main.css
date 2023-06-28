@@ -47,14 +47,12 @@ main {
   margin-top: 10px;
 }
 
-.wirte-button {
+.write-button {
   position: fixed;
   bottom: 200px;
   right: 40px;
-  background-color: #fe6f0f;
+  background-color: var(--button-primary);
   color: white;
-  /* width: 120px; */
-  /* height: 50px; */
   padding: 20px 40px;
   display: flex;
   align-items: center;
@@ -62,4 +60,10 @@ main {
   border-radius: 50px;
   font-size: 18px;
   box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.write-button:hover {
+  background-color: var(--button-hover);
 }
