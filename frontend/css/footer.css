@@ -1,0 +1,50 @@
+/* footer */
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+}
+
+.footer-box {
+  padding: 20px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+  cursor: pointer;
+}
+
+@keyframes icons-doong-doong {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.footer-icons img {
+  width: 50px;
+}
+
+.footer-icons:hover img {
+  animation: 1s icons-doong-doong infinite;
+}
+
+.footer-icons span {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
