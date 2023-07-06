@@ -1,5 +1,4 @@
 const main = document.querySelector("main");
-
 const calcTime = (timestamp) => {
   const curTime = new Date().getTime() - 9 * 60 * 60 * 1000;
   const time = new Date(curTime - timestamp);
@@ -59,6 +58,7 @@ const renderData = (data) => {
 const fetchList = async () => {
   const res = await fetch("/items");
   const data = await res.json();
+  console.log(data);
   renderData(data);
 };
 

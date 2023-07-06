@@ -45,6 +45,23 @@ async def get_image(item_id):
                                 select image from items where id={item_id}
                               """).fetchone()[0]
     return Response(content=bytes.fromhex(image_bytes), media_type="image/*")
+
+
+#회원가입
+@app.post('/signup')
+def signup(id:Annotated[str,Form()],name:Annotated[str,Form()],email:Annotated[str,Form()],password:Annotated[str,Form()]):
+    print(id, password, name, email)
+    
+    cur = con.cursor()
+    
+    cur.execute(f"""
+               INSERT INTO users(id,name,email,password)
+               VALUES ('{id}','{name}','{email}','{password}')
+               """)
+    
+    con.commit()
+    
+    return "200"
     
     
 
